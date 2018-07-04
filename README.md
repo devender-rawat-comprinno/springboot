@@ -12,3 +12,8 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 Its a Simple Project
+
+## How to access REST API ###
+
+http://localhost:8080/op
+
