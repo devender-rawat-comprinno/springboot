@@ -1,18 +1,19 @@
 package com.example.demo;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 public class Greeting implements Serializable {
 
     private String name;
+    private String greet;
 
-    public Greeting() {
+    public Greeting(String greet,String name) {
+    this.greet=greet;
+    this.name=name;
     }
 
-    public Greeting(String name) {
-        this.name = name;
-    }
+    public Greeting(){}
+
 
     public String getName() {
         return name;
@@ -22,8 +23,23 @@ public class Greeting implements Serializable {
         this.name = name;
     }
 
+    public String getGreet() {
+        return greet;
+    }
+
+    public void setGreet(String greet) {
+        this.greet = greet;
+    }
+
     public Greeting(long l, String name) {
 
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Greeting{" +
+                "greet='" + greet + '\'' +
+                '}';
     }
 }
