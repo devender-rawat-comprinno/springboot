@@ -16,15 +16,15 @@ public class HelloWorldController {
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
+    @RequestMapping(value="/hello-world", method = RequestMethod.POST)
+    
+    public @ResponseBody Greeting sayHello(@RequestBody Greeting gre) {
 
-
-    @RequestMapping (value = "/op", method = RequestMethod.POST )
-    public @ResponseBody Greeting acceptRequest(@RequestBody Greeting gre) throws Exception{
-             Greeting g=new Greeting();
-             g.setName(gre.getName());
-
-             return g;
-
+     
+        return new Greeting(String.format(template, gre.getName()),gre.getName());
     }
+
+
+  
 
 }
