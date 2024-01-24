@@ -8,6 +8,7 @@ public class HelloWorldApp {
 
     public static void main(String[] args) {
         System.out.println("running sprint boot");
+        System.out.println("running sprint boot2");
         SpringApplication.run(HelloWorldApp.class, args);
     }
 
